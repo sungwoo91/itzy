@@ -1,3 +1,4 @@
+# Android Studio Default Configuration
 *.iml
 .gradle
 /local.properties
@@ -8,5 +9,7 @@
 /build
 /captures
 .externalNativeBuild
-.idea/*
-.gradle/*
+
+# Custom Configuration
+# exclude .idea directory
+.idea
