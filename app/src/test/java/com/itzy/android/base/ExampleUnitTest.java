@@ -1,4 +1,4 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base;
 
 import org.junit.Test;
 

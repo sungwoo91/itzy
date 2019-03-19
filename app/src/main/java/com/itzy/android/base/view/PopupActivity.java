@@ -1,4 +1,4 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base.view;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.itzy.android.base.R;
+import com.itzy.android.base.model.ShoppingItem;
 
 import java.io.IOException;
 import java.io.InputStream;

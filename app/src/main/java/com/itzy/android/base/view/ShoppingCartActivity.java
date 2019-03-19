@@ -1,7 +1,9 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.itzy.android.base.R;
 
 public class ShoppingCartActivity extends AppCompatActivity {
 

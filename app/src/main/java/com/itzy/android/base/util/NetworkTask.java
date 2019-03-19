@@ -1,7 +1,6 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base.util;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;

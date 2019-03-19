@@ -1,23 +1,24 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.itzy.android.base.util.NetworkTask;
+import com.itzy.android.base.R;
+import com.itzy.android.base.presenter.ShoppingAdapter;
+import com.itzy.android.base.model.ShoppingItem;
+import com.itzy.android.base.model.ShoppingItemInfo;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Serializable;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.leesungwoo.myapplication;
+package com.itzy.android.base.model;
 
 public class ShoppingItemInfo {
     public static final String TITLE = "title";
