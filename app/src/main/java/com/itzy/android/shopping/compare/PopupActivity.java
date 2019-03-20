@@ -1,4 +1,4 @@
-package com.itzy.android.base.view;
+package com.itzy.android.shopping.compare;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -15,8 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.itzy.android.base.R;
-import com.itzy.android.base.model.ShoppingItem;
+import com.itzy.android.shopping.R;
+import com.itzy.android.shopping.search.ShoppingItem;
 
 import java.io.IOException;
 import java.io.InputStream;

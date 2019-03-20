@@ -1,4 +1,4 @@
-package com.itzy.android.base.model;
+package com.itzy.android.shopping.search;
 
 import java.io.Serializable;
 

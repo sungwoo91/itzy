@@ -1,4 +1,4 @@
-package com.itzy.android.base.model;
+package com.itzy.android.shopping.search;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.itzy.android.base.R;
+import com.itzy.android.shopping.R;
 
 public class ShoppingItemView extends LinearLayout {
     private TextView textView;

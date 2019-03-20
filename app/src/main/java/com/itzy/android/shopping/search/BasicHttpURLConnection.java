@@ -1,4 +1,4 @@
-package com.itzy.android.base.util;
+package com.itzy.android.shopping.search;
 
 import android.util.Log;
 

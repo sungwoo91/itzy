@@ -1,4 +1,4 @@
-package com.itzy.android.base.view;
+package com.itzy.android.shopping.search;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,8 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.itzy.android.base.util.NetworkTask;
-import com.itzy.android.base.R;
-import com.itzy.android.base.presenter.ShoppingAdapter;
-import com.itzy.android.base.model.ShoppingItem;
-import com.itzy.android.base.model.ShoppingItemInfo;
+import com.itzy.android.shopping.R;
+import com.itzy.android.shopping.compare.PopupActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

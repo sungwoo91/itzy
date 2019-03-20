@@ -1,4 +1,4 @@
-package com.itzy.android.base;
+package com.itzy.android.shopping;
 
 import org.junit.Test;
 

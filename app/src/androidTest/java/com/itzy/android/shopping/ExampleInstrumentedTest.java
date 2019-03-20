@@ -1,4 +1,4 @@
-package com.itzy.android.base;
+package com.itzy.android.shopping;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

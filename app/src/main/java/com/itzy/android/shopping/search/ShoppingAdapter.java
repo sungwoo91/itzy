@@ -1,4 +1,4 @@
-package com.itzy.android.base.presenter;
+package com.itzy.android.shopping.search;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -7,9 +7,6 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
-import com.itzy.android.base.model.ShoppingItem;
-import com.itzy.android.base.model.ShoppingItemView;
 
 import java.io.IOException;
 import java.io.InputStream;
