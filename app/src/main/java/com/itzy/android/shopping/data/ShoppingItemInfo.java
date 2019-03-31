@@ -1,4 +1,4 @@
-package com.itzy.android.shopping.search;
+package com.itzy.android.shopping.data;
 
 public class ShoppingItemInfo {
     public static final String TITLE = "title";

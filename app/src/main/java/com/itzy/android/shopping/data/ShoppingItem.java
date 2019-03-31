@@ -1,4 +1,4 @@
-package com.itzy.android.shopping.search;
+package com.itzy.android.shopping.data;
 
 import java.io.Serializable;
 

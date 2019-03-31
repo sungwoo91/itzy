@@ -16,18 +16,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.itzy.android.shopping.R;
-import com.itzy.android.shopping.search.ShoppingItem;
+import com.itzy.android.shopping.data.ShoppingItem;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-public class PopupActivity extends AppCompatActivity {
+public class CompareActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popup);
+        setContentView(R.layout.compare_act);
         Intent intent = getIntent();
         final ShoppingItem item = (ShoppingItem) intent.getSerializableExtra("view");
 

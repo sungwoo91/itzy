@@ -1,4 +1,4 @@
-package com.itzy.android.shopping.search;
+package com.itzy.android.shopping.data;
 
 import android.content.Context;
 import android.graphics.Bitmap;

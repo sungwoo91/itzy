@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.itzy.android.shopping.data.ShoppingItem;
+import com.itzy.android.shopping.data.ShoppingItemView;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
