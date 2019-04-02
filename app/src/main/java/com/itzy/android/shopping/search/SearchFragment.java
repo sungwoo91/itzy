@@ -43,13 +43,6 @@ public class SearchFragment extends Fragment implements SearchContract.View {
         this.mSearchPresenter = presenter;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mSearchPresenter.start();
-    }
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -76,7 +69,7 @@ public class SearchFragment extends Fragment implements SearchContract.View {
     }
 
     @Override
-    public void startPopupActivity(int position) {
+    public void startCompareActivity(int position) {
         Intent intent = new Intent(getActivity().getApplicationContext(), CompareActivity.class);
         intent.putExtra("view", (ShoppingItem) adapter.getItem(position));
         startActivity(intent);

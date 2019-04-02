@@ -1,11 +1,7 @@
 package com.itzy.android.shopping.search;
 
-import android.view.View;
-import android.widget.EditText;
-
 import com.itzy.android.shopping.BasePresenter;
 import com.itzy.android.shopping.BaseView;
-import com.itzy.android.shopping.data.ShoppingItem;
 
 import org.json.JSONObject;
 
@@ -21,7 +17,7 @@ public interface SearchContract {
         // 아이템 클릭시
         void showItemPopup();
 
-        void startPopupActivity(int position);
+        void startCompareActivity(int position);
     }
 
     interface Presenter extends BasePresenter {

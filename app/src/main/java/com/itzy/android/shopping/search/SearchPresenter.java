@@ -13,7 +13,6 @@ public class SearchPresenter implements SearchContract.Presenter {
 
     private SearchContract.View mSearchView;
 
-
     public SearchPresenter(@NonNull SearchContract.View searchView) {
         mSearchView = searchView;
         mSearchView.setPresenter(this);
@@ -26,7 +25,7 @@ public class SearchPresenter implements SearchContract.Presenter {
 
     @Override
     public void searchItem(String text) {
-        JSONObject jsonObject = null;
+        JSONObject jsonObject;
         try {
             jsonObject = new NetworkTask().execute(text).get();
         } catch (InterruptedException e) {
@@ -38,9 +37,8 @@ public class SearchPresenter implements SearchContract.Presenter {
         mSearchView.showItems(jsonObject);
     }
 
-
     @Override
     public void getItem(int position) {
-        mSearchView.startPopupActivity(position);
+        mSearchView.startCompareActivity(position);
     }
 }
