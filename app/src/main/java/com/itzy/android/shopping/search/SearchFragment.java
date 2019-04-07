@@ -17,6 +17,7 @@ import com.itzy.android.shopping.R;
 import com.itzy.android.shopping.compare.CompareActivity;
 import com.itzy.android.shopping.data.ShoppingItem;
 import com.itzy.android.shopping.data.ShoppingItemInfo;
+import com.itzy.android.shopping.util.ShoppingAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
