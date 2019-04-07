@@ -43,6 +43,12 @@ public class SearchFragment extends Fragment implements SearchContract.View {
         this.mSearchPresenter = presenter;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mSearchPresenter.start();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,51 +56,30 @@ public class SearchFragment extends Fragment implements SearchContract.View {
         setHasOptionsMenu(true);
 
         mEditText = root.findViewById(R.id.editText);
-        mListView = root.findViewById(R.id.listView);
 
-        searchItem();
-        showItemPopup();
+        // 기본 검색 기능
+        mEditText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int event, KeyEvent keyEvent) {
+                switch (event) {
+                    case KeyEvent.KEYCODE_ENTER:
+                        mSearchPresenter.searchItems(((EditText) view).getText().toString());
+                }
+                return true;
+            }
+        });
+
+        mListView = root.findViewById(R.id.listView);
 
         return root;
     }
 
     @Override
-    public void showItemPopup() {
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mSearchPresenter.getItem(position);
-            }
-        });
-    }
-
-    @Override
-    public void startCompareActivity(int position) {
-        Intent intent = new Intent(getActivity().getApplicationContext(), CompareActivity.class);
-        intent.putExtra("view", (ShoppingItem) adapter.getItem(position));
-        startActivity(intent);
-    }
-
-    @Override
-    public void searchItem() {
-        mEditText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                switch (i) {
-                    case KeyEvent.KEYCODE_ENTER:
-                        String text = ((EditText) view).getText().toString();
-                        mSearchPresenter.searchItem(text);
-                }
-                return true;
-            }
-        });
-    }
-
-    @Override
-    public void showItems(JSONObject jsonObject) {
+    public void showItems(final JSONObject jsonObject) {
+        // TODO : 어댑터 하는 부분을 따로 분리 하긴 해야 하는데...
         try {
+            JSONArray items = (JSONArray) jsonObject.get("items");
             adapter = new ShoppingAdapter(getActivity().getApplicationContext());
-            final JSONArray items = (JSONArray) jsonObject.get("items");
 
             JSONObject item;
             for (int i = 0; i < items.length(); i++) {
@@ -105,9 +90,24 @@ public class SearchFragment extends Fragment implements SearchContract.View {
                         (String) item.get(ShoppingItemInfo.LOW_PRICE),
                         (String) item.get(ShoppingItemInfo.ORIGIN_MALL_NAME)));
             }
-            mListView.setAdapter(adapter);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+        mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mSearchPresenter.getItem(position);
+            }
+        });
+    }
+
+    @Override
+    public void showCompareActivity(int position) {
+        Intent intent = new Intent(getActivity().getApplicationContext(), CompareActivity.class);
+        intent.putExtra("view", (ShoppingItem) adapter.getItem(position));
+        startActivity(intent);
     }
 }

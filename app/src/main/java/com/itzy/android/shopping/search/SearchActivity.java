@@ -14,11 +14,13 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.search_act);
 
         SearchFragment searchFragment = (SearchFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+
         if(searchFragment == null) {
             searchFragment = SearchFragment.newInstance();
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                     searchFragment, R.id.contentFrame);
         }
+
         new SearchPresenter(searchFragment);
     }
 }
