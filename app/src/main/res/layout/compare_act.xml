@@ -1,103 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".compare.CompareActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="루이비통 가방!!!"
-        android:textColor="@android:color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/contentFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="match_parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/louisvuitton" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="공식홈페이지!"
-                android:textColor="#4902d6"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100만원!!"
-                android:textColor="#0223e0"
-                android:textSize="20dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/priceEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="가격을 입력하세요"
-            android:inputType="numberSigned" />
-
-        <TextView
-            android:id="@+id/comparedPriceTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="가격을 입력하면 이득보는 돈이 나옵니다" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/AddButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="담기" />
-
-        <Button
-            android:id="@+id/returnButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="돌아가기" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
