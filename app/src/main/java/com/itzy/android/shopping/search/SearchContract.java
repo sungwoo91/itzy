@@ -18,9 +18,6 @@ public interface SearchContract {
 
     interface Presenter extends BasePresenter {
 
-        // 처음 앱을 시작 했을 때 로직 처리
-        void init();
-
         // 검색 시 로직 처리
         void searchItems(String text);
 

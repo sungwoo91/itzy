@@ -21,12 +21,7 @@ public class SearchPresenter implements SearchContract.Presenter {
 
     @Override
     public void start() {
-        init();
-    }
 
-    @Override
-    public void init() {
-        Log.d("init","start search presenter");
     }
 
     @Override
