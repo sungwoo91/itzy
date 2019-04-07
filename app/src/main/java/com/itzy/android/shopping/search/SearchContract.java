@@ -3,8 +3,6 @@ package com.itzy.android.shopping.search;
 import com.itzy.android.shopping.BasePresenter;
 import com.itzy.android.shopping.BaseView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public interface SearchContract {

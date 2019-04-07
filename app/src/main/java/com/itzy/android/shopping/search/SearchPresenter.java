@@ -3,12 +3,8 @@ package com.itzy.android.shopping.search;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.itzy.android.shopping.data.ShoppingItem;
-import com.itzy.android.shopping.data.ShoppingItemInfo;
 import com.itzy.android.shopping.util.NetworkTask;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
