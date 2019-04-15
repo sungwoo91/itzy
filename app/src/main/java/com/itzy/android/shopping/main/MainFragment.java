@@ -5,26 +5,25 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 
 import com.itzy.android.shopping.R;
 import com.itzy.android.shopping.cart.CartActivity;
 import com.itzy.android.shopping.compare.CompareActivity;
-import com.itzy.android.shopping.data.ShoppingItem;
 import com.itzy.android.shopping.search.SearchActivity;
 
 public class MainFragment extends Fragment implements MainContract.View {
 
     private MainContract.Presenter mPresenter;
 
-    private Button mCategoryButton;
+    private ImageButton mCategoryButton;
 
-    private Button mCartButton;
+    private ImageButton mCartButton;
 
     private SearchView mSearchView;
 
