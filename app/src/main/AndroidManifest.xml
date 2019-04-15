@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.itzy.android.shopping.search.SearchActivity">
+        <activity android:name="com.itzy.android.shopping.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +21,7 @@
         </activity>
         <activity android:name="com.itzy.android.shopping.compare.CompareActivity" android:theme="@style/popupTheme" android:screenOrientation="portrait"/>
         <activity android:name="com.itzy.android.shopping.cart.CartActivity"></activity>
+        <activity android:name="com.itzy.android.shopping.search.SearchActivity"></activity>
     </application>
 
 </manifest>
